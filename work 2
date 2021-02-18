@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int multiply(int a, int b)
+{
+    if(b == 0)
+    {
+        return 1;
+    }
+    return a*multiply(a, b-1);
+
+}
+int main()
+{
+    int base, exp;
+    cout <<"Enter a number (base): ";
+    cin >> base;
+    cout << "Enter a number (exp) : ";
+    cin >> exp;
+    cout<< multiply(base , exp);
+    return 0;
+}
